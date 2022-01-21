@@ -122,6 +122,8 @@ msg.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
           prize: giveawayPrize,
           // The giveaway winner count
           winnerCount: parseInt(giveawayWinnerCount),
+          // The giveaway host
+	  hostedBy: `<@!${interaction.user.id}>`,		 
           // BonusEntries If Provided
       bonusEntries: [
         {
