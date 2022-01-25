@@ -49,6 +49,12 @@ module.exports = {
       type: 'INTEGER',
       required: false
     },
+    {
+      name: 'note',
+      description: 'Anything you wanna type (can include requirements/how to claim)',
+      type: 'STRING',
+      required: false
+    },
   ],
 
   run: async (client, interaction) => {
@@ -68,6 +74,7 @@ module.exports = {
     const giveawayPing = interaction.options.getRole('pingrole');
     const bonusRole = interaction.options.getRole('bonusrole');
     const bonusEntries = interaction.options.getInteger('bonusamount');
+    const giveawayNote = interaction.options.getString('note');
 
     if (!giveawayChannel.isText()) {
       return interaction.reply({
@@ -101,6 +108,17 @@ module.exports = {
     if (!bonusRole) {
       messages.inviteToParticipate = `**React with 🎉 to participate!**`
     }
+	  const nembed = new MessageEmbed()
+    .setTitle('Note from the host')
+    .setColor('RANDOM')
+    .setTimestamp()
+    .addFields(
+      {
+        name: `Note from ${interaction.user.username}!`,
+        value: `>>> ${giveawayNote}`
+      }
+    )
+    .setFooter(`Note from ${interaction.user.username} | GiveawaysforLife`, interaction.user.displayAvatarURL())
 	
     let msg = await interaction.reply({ content: `**Is everything correct?**\n>>> >>> - Channel: ${giveawayChannel}\n>>> - Duration: ${giveawayDuration}\n>>> - Winners: ${giveawayWinnerCount}\n>>> - Prize: ${giveawayPrize}\n>>> - Role to ping: ${giveawayPing}\n>>> - Bonus role: ${bonusRole}\n>>> - Bonus amount: ${bonusEntries}`,
                                        ephemeral: false, fetchReply: true });
@@ -135,18 +153,26 @@ msg.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
           messages,
       
         });
-      msg.reactions.removeAll() 
-      
+      msg.reactions.removeAll()
+
 		} else {
 			interaction.editReply(':x: Giveaway was cancelled');
       msg.reactions.removeAll()
-		}
-
-     if (giveawayPing) {
+		};
+	
+    if (giveawayNote && giveawayPing) {
+      giveawayChannel.send({ embeds: [nembed] })
+      giveawayChannel.send(`${giveawayPing}`)
+    }
+    if (giveawayNote && !giveawayPing) {
+      giveawayChannel.send({ embeds: [nembed] });
+    } 
+    if (!giveawayNote && giveawayPing) {
         giveawayChannel.send(`${giveawayPing}`);
-      } else {
-        return;
-      } 
+    }
+    if (!giveawayNote && !giveawayPing) {
+      return
+    }
 
 	})
 	.catch(collected => {
