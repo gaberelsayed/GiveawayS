@@ -1,37 +1,76 @@
-## Welcome to GitHub Pages
+# Welcome to GiveawayS! [![Discord Bots](https://top.gg/api/widget/status/900628889452314674.svg)](https://top.gg/bot/900628889452314674)
 
-You can use the [editor on GitHub](https://github.com/Aim2339/GiveawayS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction:
+**GiveawayS** is an open-sorce bot which facilitates the creation of giveaways in your guild!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It is loaded with amazing features and easy to use and handle!
 
-### Markdown
+The bot's prefix is **/** and currently has **18** commands registered to it!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[![Discord Bots](https://top.gg/api/widget/900628889452314674.svg)](https://top.gg/bot/900628889452314674)
 
-```markdown
-Syntax highlighted code block
+---
 
-# Header 1
-## Header 2
-### Header 3
+## List of commands:
 
-- Bulleted
-- List
+### Giveaway commands:-
 
-1. Numbered
-2. List
+**`/create`** - Start a giveaway in your server!
 
-**Bold** and _Italic_ and `Code` text
+**`/edit`** - Edit an already running giveaway!
 
-[Link](url) and ![Image](src)
-```
+**`/end`** - End an already running giveaway!
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+**`/list`** - List all the giveaways running within your server!
 
-### Jekyll Themes
+**`/pause`** - Pause an already running giveaway!
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Aim2339/GiveawayS/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**`/resume`** - Resume a paused giveaway!
+
+**`/reroll`** - Reroll an ended giveaway!
+
+**`/delete`** - Delete an ended giveaway!
+
+### General commands:-
+
+**`/help`** - Show a list of available bot commands with description!
+
+**`/invite`** - Get the bot's invite link!
+
+**`/ping`** - Check the bot's websocket latency!
+
+**`/vote`** - Vote for the bot on top.gg!
+
+**`/status`** - Check the bot's uptime status!
+
+**`/stats`** - Check the bot's physical statistics!
+
+**`/feedback`** - Send feedback about the bot to the developer!
+
+**`/faq`** - Frequently Asked Questions of the bot!
+
+**`/updates`** - Get the latest news and updates from the developer!
+
+### Fun commands:-
+
+**`/rps`** - Play rock paper scissors with the bot!
+
+---
+
+## Links:
+
+**[Invite link](https://discord.com/api/oauth2/authorize?client_id=900628889452314674&permissions=8&scope=applications.commands%20bot)**
+
+**[Status link](https://stats.uptimerobot.com/8gMWRsXP3N/)**
+
+**[Top.gg link](https://top.gg/bot/900628889452314674)**
+
+**[Vote link](https://top.gg/bot/900628889452314674/vote)**
+
+---
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Having trouble with the bot? Please let me know by using the inbuilt **`/feedback`** command or by directly **DM'ing** me on **[Discord](https://discord.com/app)**
+
+**User:** **`Aim#2339`**
