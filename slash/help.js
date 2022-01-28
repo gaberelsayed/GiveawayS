@@ -22,7 +22,7 @@ module.exports = {
         { name: '__Ping__', value: `Check the bot's websocket latency!\n > **How?: \`/ping\`**`, inline: true },
         { name: '__Vote__', value: `Vote for the bot!\n > **How?: \`/vote\`**`, inline: true },
         { name: '__Feedback__', value: `Send live feedback about the bot to the developer!\n > **How?: \`/feedback\`**`, inline: true },
-        { name: '__Status__', value: `Check the bot's status!\n > **How?: \`/status\`**`, inline: true },
+        { name: '__Links__', value: `Get a llist of links related to the bot!\n > **How?: \`/links\`**`, inline: true },
         { name: '__Stats__', value: `Check the bot's physical statistics!\n > **How?: \`/stats\`**`, inline: true },
         { name: '__Faq__', value: `Frequently Asked Questions of the bot!\n > **How?: \`/faq\`**`, inline: true },
         { name: '__Updates__', value: `Get the latest news and updates from the developer!\n > **How?: \`/updates\`**`, inline: true },
