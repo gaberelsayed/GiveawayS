@@ -49,7 +49,7 @@ module.exports = {
       type: 'INTEGER',
       required: false
     },
-    {
+        {
       name: 'note',
       description: 'Anything you wanna type (can include requirements/how to claim)',
       type: 'STRING',
@@ -102,13 +102,14 @@ module.exports = {
       }
     }
 
-        if (bonusRole) {
+    if (bonusRole) {
       messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> **${bonusRole}** Has **${bonusEntries}** Extra Entries in this giveaway!`
     }
     if (!bonusRole) {
       messages.inviteToParticipate = `**React with 🎉 to participate!**`
     }
-	  const nembed = new MessageEmbed()
+
+    const nembed = new MessageEmbed()
     .setTitle('Note from the host')
     .setColor('RANDOM')
     .setTimestamp()
@@ -120,7 +121,7 @@ module.exports = {
     )
     .setFooter(`Note from ${interaction.user.username} | GiveawaysforLife`, interaction.user.displayAvatarURL())
 	
-    let msg = await interaction.reply({ content: `**Is everything correct?**\n>>> >>> - Channel: ${giveawayChannel}\n>>> - Duration: ${giveawayDuration}\n>>> - Winners: ${giveawayWinnerCount}\n>>> - Prize: ${giveawayPrize}\n>>> - Role to ping: ${giveawayPing}\n>>> - Bonus role: ${bonusRole}\n>>> - Bonus amount: ${bonusEntries}`,
+    let msg = await interaction.reply({ content: `**Is everything correct?**\n>>> >>> - Channel: ${giveawayChannel}\n>>> - Duration: ${giveawayDuration}\n>>> - Winners: ${giveawayWinnerCount}\n>>> - Prize: ${giveawayPrize}\n>>> - Role to ping: ${giveawayPing}\n>>> - Bonus role: ${bonusRole}\n>>> - Bonus amount: ${bonusEntries}\n>>> - Note: ${giveawayNote}`,
                                        ephemeral: false, fetchReply: true });
     await msg.react("✅").then(() => msg.react('❌'));
     const filter = (reaction, user) => {
@@ -141,7 +142,7 @@ msg.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
           // The giveaway winner count
           winnerCount: parseInt(giveawayWinnerCount),
           // The giveaway host
-	  hostedBy: `<@!${interaction.user.id}>`,		 
+          hostedBy: `<@!${interaction.user.id}>`,
           // BonusEntries If Provided
       bonusEntries: [
         {
@@ -153,13 +154,8 @@ msg.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
           messages,
       
         });
-      msg.reactions.removeAll()
+      msg.reactions.removeAll() 
 
-		} else {
-			interaction.editReply(':x: Giveaway was cancelled');
-      msg.reactions.removeAll()
-		};
-	
     if (giveawayNote && giveawayPing) {
       giveawayChannel.send({ embeds: [nembed] })
       giveawayChannel.send(`${giveawayPing}`)
@@ -173,6 +169,11 @@ msg.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
     if (!giveawayNote && !giveawayPing) {
       return
     }
+      
+		} else {
+			interaction.editReply(':x: Giveaway was cancelled');
+      msg.reactions.removeAll()
+		}
 
 	})
 	.catch(collected => {
