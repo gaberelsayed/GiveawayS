@@ -1,6 +1,6 @@
-# Welcome to GiveawayS!
+# Welcome to GiveawayS! 🎉
 
-## Introduction:
+## Introduction: 🤖
 **GiveawayS** is an open-sorce bot which facilitates the creation of giveaways in your guild!
 
 It is loaded with amazing features and easy to use and handle!
@@ -11,9 +11,9 @@ The bot's prefix is **/** and currently has **18** commands registered to it!
 
 ---
 
-## List of commands:
+## List of commands: 📜
 
-### Giveaway commands:-
+### Giveaway commands:- 🎁
 
 **`/create`** - Start a giveaway in your server!
 
@@ -31,7 +31,7 @@ The bot's prefix is **/** and currently has **18** commands registered to it!
 
 **`/delete`** - Delete an ended giveaway!
 
-### General commands:-
+### General commands:- ⚙️
 
 **`/help`** - Show a list of available bot commands with description!
 
@@ -51,13 +51,13 @@ The bot's prefix is **/** and currently has **18** commands registered to it!
 
 **`/updates`** - Get the latest news and updates from the developer!
 
-### Fun commands:-
+### Fun commands:- 😆
 
 **`/rps`** - Play rock paper scissors with the bot!
 
 ---
 
-## Links:
+## Links: 🔗
 
 **[Invite link](https://discord.com/api/oauth2/authorize?client_id=900628889452314674&permissions=8&scope=applications.commands%20bot)**
 
@@ -67,10 +67,14 @@ The bot's prefix is **/** and currently has **18** commands registered to it!
 
 **[Vote link](https://top.gg/bot/900628889452314674/vote)**
 
+**[Website link](https://aim2339.github.io/GiveawayS/)**
+
 ---
 
-### Support or Contact
+## Support or Contact 📞
 
-Having trouble with the bot? Please let me know by using the inbuilt **`/feedback`** command or by directly **DM'ing** me on **[Discord](https://discord.com/app)**
+Having trouble with the bot? Please let me know by using the inbuilt **`/feedback`** command or just directly **DM** me on **[Discord](https://discord.com/users/756060979896385606)**
 
 **User:** **`Aim#2339`**
+
+---
