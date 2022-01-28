@@ -1,4 +1,4 @@
-# Welcome to GiveawayS! [![Discord Bots](https://top.gg/api/widget/status/900628889452314674.svg)](https://top.gg/bot/900628889452314674)
+# Welcome to GiveawayS!
 
 ## Introduction:
 **GiveawayS** is an open-sorce bot which facilitates the creation of giveaways in your guild!
@@ -41,7 +41,7 @@ The bot's prefix is **/** and currently has **18** commands registered to it!
 
 **`/vote`** - Vote for the bot on top.gg!
 
-**`/status`** - Check the bot's uptime status!
+**`/links`** - Get a list of links related to the bot!
 
 **`/stats`** - Check the bot's physical statistics!
 
