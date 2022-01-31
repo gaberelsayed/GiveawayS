@@ -33,6 +33,7 @@ module.exports = {
 
       const aembed = new MessageEmbed()
       .setTitle(`Feedback received`)
+      .setThumbnail(interaction.guild.iconURL())
       .setColor('RANDOM')
       .addFields(	
         {
