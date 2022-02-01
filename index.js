@@ -5,7 +5,7 @@ const { AutoPoster } = require('topgg-autoposter');
 const ap = AutoPoster(process.env.TOPGG_TOKEN, client)
 const fs = require('fs');
 const config = require('./config.json');
-client.config = config;
+client.config = config;        
 
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
@@ -25,7 +25,7 @@ client.giveawaysManager = new GiveawaysManager(client, {
 
 ap.on('posted', () => {
   console.log('Posted stats to Top.gg!')
-})
+})  
 
 fs.readdir('./events/discord', (_err, files) => {
 	files.forEach(file => {
