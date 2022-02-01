@@ -2,8 +2,8 @@ const keepAlive = require('./server');
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: 7753 });
 const { AutoPoster } = require('topgg-autoposter');
+const ap = AutoPoster(process.env.TOPGG_TOKEN, client)
 const fs = require('fs');
-const ap = AutoPoster(process.env.TOPGG_TOKEN, client);
 const config = require('./config.json');
 client.config = config;
 
@@ -73,6 +73,17 @@ client.on('ready', () => {
 	client.user.setPresence({
 		status: 'online'
 	});
+});
+
+client.on('messageCreate', message => {
+const channel = message.channel.id
+    if (message.content === '<@!900628889452314674>') {
+      if (message.guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'READ_MESSAGE_HISTORY'])) {
+        message.channel.send(`Hi ${message.author}, my prefix is \`/\`\nIf you are new then start by doing \`/help\` for a list of commands!`);
+    } else {
+        return
+    }
+  }
 });
 
 keepAlive();
